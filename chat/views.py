@@ -7,7 +7,7 @@ from chat.models import ChatRoom
 def index(request):
     chat_room = ChatRoom.objects.order_by('name')[:5]
     context = {
-        'chat_list': chat_rooms,
+        'chat_list': chat_room,
     }
     return render(request, 'chats/index.html', context)
 
